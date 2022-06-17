@@ -46,7 +46,7 @@ main {
 
 .logo {
     width: 130px;
-    margin-bottom: 80px;
+    margin-bottom: min(80px, 7vh);
 }
 
 .title {
@@ -132,7 +132,7 @@ main {
 
 .login-checkbox {
     width: 100%;
-    margin: 15px 0 50px;
+    margin: 15px 0 min(50px, 7vh);
     font-size: 0.9em;
     font-weight: 500;
     display: flex;
@@ -178,7 +178,7 @@ main {
     border-radius: 20px;
     border: none;
     cursor: pointer;
-    margin-bottom: 60px;
+    margin-bottom: min(50px, 7vh);
 }
 
 .botao-login svg {
