@@ -40,3 +40,30 @@ inputs.forEach(input => input.addEventListener('focusout', desfocar));
 
 // Adiciona um Listener quando é muda valor input
 inputs.forEach(input => input.addEventListener('input', checarTamanho));
+
+
+// Get the modal
+const modal = document.querySelector(".modal");
+
+// Get the <span> element that closes the modal
+const span = document.querySelector(".botao-fechar");
+
+// When the user clicks on the button, open the modal
+botao.onclick = function() {
+  modal.style.display = "flex";
+
+  const msg = document.querySelector("h2.title");
+  msg.innerHTML = "Bem-vindo, " + inputs[0].value + "!"; 
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
