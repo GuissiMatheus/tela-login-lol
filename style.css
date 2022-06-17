@@ -204,6 +204,14 @@ main {
     font-weight: 700;
 }
 
+.versao {
+    text-transform: uppercase;
+    align-self: end;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: var(--cinza);
+}
+
 .wallpaper {
     width: 100%;
     background-image: url('images/teemo-lunar.jfif');
@@ -211,6 +219,9 @@ main {
     background-position: center;
     flex: 1;    /* Ocupa 100% do espaço que sobrar */
 }
+
+
+/* ----- CSS MODAL ----- */
 
 .modal {
     display: none;
