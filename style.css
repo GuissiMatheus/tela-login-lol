@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/* Pseudoclasse */
+:root {
+    --branco: #FFF;
+    --brancosmoke: #F9F9F9;
+    --cinza-claro: #ECECEC;
+    --cinza: #C4C4C4;
+    --cinza-medio: #A7A7A7;
+    --cinza-escuro: #343434;
+    --preto: #000000;
+    --azul: #1B77F3;
+    --vermelho: #CF3C3F;
+}
+
+main {
+    display: flex;
+}
+
+.login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 500px;
+    min-height: 100vh;
+    padding: clamp(35px, 8%, 70px); /* tamanhos (mínimo, preferencial, máximo) */
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 130px;
+    margin-bottom: 80px;
+}
+
+.title {
+    color: var(--cinza-escuro);
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.label {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.label span {
+    position: absolute;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cinza-medio);
+    margin: 20px;
+    cursor: text;
+    transition: all 200ms ease; /* Animação em tudo e suave*/
+}
+
+.label .span-ativo {
+    font-size: 0.7em;
+    margin: 8px 10px;
+}
+
+.input {
+    width: 100%;
+    background-color: var(--cinza-claro);
+    border: 2px solid rgba(0, 0, 0, 0); /* Borda transparente pra evitar movimento quando foca */
+    border-radius: 5px;
+    outline: none;  /* Remove contorno */
+    font-size: 0.9em;
+    padding: 25px 10px 10px;    /* top left-right bottom */
+    font-weight: 600;
+    color: var(--cinza-escuro);
+}
+
+.input:focus {
+    background-color: var(--brancosmoke);
+    border: 2px solid var(--cinza-escuro);
+}
+
+.icones {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.icones img {
+    width: 20px;
+}
+
+.botao-site {
+    width: 33.33%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Primeiro .botao-site que é filho de .icones */
+.icones .botao-site:nth-child(1) {
+    background-color: var(--azul);
+}
+
+.icones .botao-site:nth-child(2) {
+    background-color: var(--branco);
+    border: 2px solid var(--cinza-claro);
+}
+
+.icones .botao-site:nth-child(3) {
+    background-color: var(--preto);
+}
+
+.login-checkbox {
+    width: 100%;
+    margin: 15px 0 50px;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    appearance: none; /* Resetar para aplicar CSS */
+    width: 20px;
+    height: 20px;
+    background-color: var(--cinza-claro);
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+.checkbox:checked {
+    background-color: var(--vermelho);
+}
+
+/**
+ * Pseudoelemento
+ * Gambiarra pra criar o check
+ */
+.checkbox:checked::after {
+    content: "";
+    width: 5px;
+    height: 10px;
+    display: block;
+    border: 3px solid var(--branco);
+    border-width: 0 3px 3px 0;
+    margin: 2px 6px;
+    transform: rotate(45deg);
+}
+
+.botao-login {
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--vermelho);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+.botao-login svg {
+    fill: var(--branco);
+}
+
+.botao-login:disabled {
+    cursor: default;
+    background-color: var(--branco);
+    border: 2px solid var(--cinza-claro);
+}
+
+.botao-login:disabled svg {
+    fill: var(--cinza-claro);
+}
+
+.link {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: var(--cinza-medio);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.wallpaper {
+    width: 100%;
+    background-image: url('images/teemo-lunar.jfif');
+    background-size: cover;
+    background-position: center;
+    flex: 1;    /* Ocupa 100% do espaço que sobrar */
+}
