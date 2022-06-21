@@ -33,7 +33,7 @@ main {
     justify-content: space-between;
     max-width: 500px;
     min-height: 100vh;
-    padding: clamp(35px, 8%, 70px); /* tamanhos (mínimo, preferencial, máximo) */
+    padding: clamp(35px, 5vw, 70px); /* tamanhos (mínimo, preferencial, máximo) */
 }
 
 .wrapper {
