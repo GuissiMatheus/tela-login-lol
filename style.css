@@ -30,7 +30,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     max-width: 500px;
     min-height: 100vh;
     padding: clamp(35px, 5vw, 70px); /* tamanhos (mínimo, preferencial, máximo) */
@@ -218,6 +218,39 @@ main {
     background-size: cover;
     background-position: center;
     flex: 1;    /* Ocupa 100% do espaço que sobrar */
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: var(--cinza-escuro);
+}
+
+.info a {
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.info img {
+    width: 36px;
+}
+
+.info img[alt="LinkedIn"] {
+    border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+    .logo, .title, .login-checkbox, .botao-login {
+        margin-bottom: 20px;
+    }
 }
 
 
